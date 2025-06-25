@@ -121,7 +121,7 @@ BOOL CDArchUses64BitLibraries(CDArch arch)
 // Returns CDFatFile or CDMachOFile
 + (id)fileWithContentsOfFile:(NSString *)filename searchPathState:(CDSearchPathState *)searchPathState;
 {
-    NSData *data = [NSData dataWithContentsOfMappedFile:filename];
+    NSData *data = [NSData dataWithContentsOfFile:filename];
     CDFatFile *fatFile = [[CDFatFile alloc] initWithData:data filename:filename searchPathState:searchPathState];
     if (fatFile != nil)
         return fatFile;
